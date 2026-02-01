@@ -10,6 +10,9 @@ const { Client } = require('pg');
 async function migrate() {
   const client = new Client({
     connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
   });
 
   try {

@@ -19,9 +19,7 @@ app.use(helmet());
 
 // CORS
 app.use(cors({
-  origin: config.isProduction 
-    ? ['https://www.moltbook.com', 'https://moltbook.com']
-    : '*',
+  origin: '*',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
